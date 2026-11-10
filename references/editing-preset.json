@@ -1,0 +1,120 @@
+{
+  "template": "thai-story-video",
+  "version": 4,
+  "export": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "video_codec": "libx264",
+    "pixel_format": "yuv420p",
+    "crf": 18,
+    "preset": "fast",
+    "audio_codec": "aac",
+    "audio_bitrate": "192k",
+    "audio_sample_rate_hz": 48000,
+    "faststart": true
+  },
+  "captions": {
+    "baseline": "V4",
+    "font": "Noto Sans Thai",
+    "bold": true,
+    "ass_font_size": 108,
+    "long_phrase_font_size": 108,
+    "long_phrase_threshold_code_points": null,
+    "color_rgb": "#FFFFFF",
+    "emphasis_rgb": "#FFD869",
+    "outline_rgb": "#1A1E28",
+    "outline": 5,
+    "shadow": 2,
+    "shadow_ass_color": "&H80000000",
+    "border_style": 1,
+    "background_panel": false,
+    "alignment": 5,
+    "position": {
+      "x": 500,
+      "default_y": 1518,
+      "alternate_y": 520
+    },
+    "pop": {
+      "initial_percent": 96,
+      "overshoot_percent": 112,
+      "settle_percent": 100,
+      "overshoot_at_ms": 65,
+      "settle_at_ms": 145
+    },
+    "scene_headers": false,
+    "scene_numbers": false,
+    "decorative_top_line": false,
+    "long_phrase_layout": "wrap at semantic word boundaries into two lines when measured width exceeds safe area",
+    "emphasis_mode": "active spoken word only; inactive words white",
+    "active_regular_rgb": "#94E5FF",
+    "active_emphasis_rgb": "#FFD869",
+    "word_timing": "derive from actual narration; correct ASR against source script",
+    "two_line_y": [
+      1460,
+      1585
+    ]
+  },
+  "picture_motion": {
+    "source_scale_width": 1200,
+    "zoom_min": 1,
+    "zoom_max": 1.035,
+    "alternate_zoom_direction": true,
+    "scene_entry_fade_seconds": 0.13,
+    "scene_entry_fade_rgb": "#FFF4E0"
+  },
+  "audio": {
+    "continuous_single_narration": true,
+    "narration_loudnorm": {
+      "integrated_lufs": -16,
+      "true_peak_db": -1.5,
+      "lra": 11
+    },
+    "mix_normalize": false,
+    "limiter": 0.95,
+    "transition_whoosh_seconds": 0.19,
+    "transition_noise_gain": 0.13,
+    "transition_noise_smoothing": 0.18,
+    "transition_seed": 8
+  },
+  "outro": {
+    "enabled_by_default": false,
+    "asset": null,
+    "rule": "Use only an existing user-provided outro when requested; inspect actual duration and media format."
+  },
+  "timing": {
+    "rule": "End shortly after actual narration; no unspoken summary captions. Append an outro only when requested.",
+    "reuse_baseline_timestamps_for_new_story": false
+  },
+  "cover": {
+    "baseline": "V1",
+    "platform_use": "Create both platform covers with each video; apply the matching cover when publication to that platform is authorized",
+    "style": {
+      "background": "warm cream",
+      "headline": "large chunky rounded Thai, deep green",
+      "highlight": "yellow behind key phrase",
+      "character": "consistent with current episode, centered lower half",
+      "channel_name": null,
+      "branding_position": "bottom with margin",
+      "headline_lines": "2–3 short lines",
+      "topic_label_position": "top"
+    },
+    "reuse_example_headline_for_new_story": false,
+    "requires_thai_text_check": true,
+    "default_include_on_video_creation": true,
+    "platform_variants": {
+      "facebook": {
+        "aspect_ratio": "9:16",
+        "width": 1080,
+        "height": 1920
+      },
+      "tiktok": {
+        "aspect_ratio": "3:4",
+        "width": 1080,
+        "height": 1440
+      }
+    },
+    "apply_matching_cover_on_authorized_publish": true,
+    "verify_applied_cover": true
+  }
+}
